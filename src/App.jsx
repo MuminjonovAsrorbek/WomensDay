@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { WomensDayLoader } from './components/WomensDayLoader';
 import { WomensDayBloom } from './components/WomensDayBloom';
-
+//KOMENT
 export default function App() {
   const [loading, setLoading] = useState(true);
   const [showSurprise, setShowSurprise] = useState(false);
