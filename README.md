@@ -20,7 +20,7 @@ npm install
 npm run dev
 ```
 
-Brauzer: `http://localhost:5173`
+Brauzer: `http://localhost:5174`
 
 ## Production build
 ```bash
