@@ -15,7 +15,7 @@ pipeline {
                 cleanWs()
                 echo 'Cloning repository...'
                 git branch: 'main',
-                    url: 'https://github.com/MuminjonovAsrorbek/womenday.git',
+                    url: 'https://github.com/MuminjonovAsrorbek/WomensDay.git',
                     credentialsId: 'github-token'
                 echo 'Repository cloned successfully.'
             }
