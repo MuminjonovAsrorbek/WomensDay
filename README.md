@@ -41,7 +41,7 @@ docker run -d --name womenday-container --restart unless-stopped -p 8088:80 wome
 
 Brauzer: `http://localhost:5174`
 
-> Eslatma: `5173` port band bo'lgani uchun deploy uchun `8088` ishlatilgan.
+> Eslatma: `5173` port band bo'lgani uchun deploy uchun `5174` ishlatilgan.
 
 ## Jenkins pipeline
 Loyihada tayyor [Jenkinsfile](./Jenkinsfile) bor.
