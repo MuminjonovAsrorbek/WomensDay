@@ -39,7 +39,7 @@ docker build -t womenday:latest .
 docker run -d --name womenday-container --restart unless-stopped -p 8088:80 womenday:latest
 ```
 
-Brauzer: `http://localhost:8088`
+Brauzer: `http://localhost:5174`
 
 > Eslatma: `5173` port band bo'lgani uchun deploy uchun `8088` ishlatilgan.
 
