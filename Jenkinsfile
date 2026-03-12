@@ -38,6 +38,23 @@ pipeline {
                 echo "Application deployed at http://localhost:${HOST_PORT}"
             }
         }
+
+        stage('4. Cleanup Old Images') {
+            steps {
+                echo "Cleaning old images for repo asrorbek/womenday"
+                sh '''
+                    set -e
+                    # Remove dangling layers first
+                    docker image prune -f --filter "dangling=true"
+
+                    # Remove old tags for this repo except latest and current build
+                    docker images --format '{{.Repository}}:{{.Tag}} {{.ID}}' --filter "reference=asrorbek/womenday:*" \
+                      | awk '$1 !~ /:latest$/ && $1 !~ /:'"$BUILD_NUMBER"'$/ {print $2}' \
+                      | sort -u \
+                      | xargs -r docker rmi -f
+                '''
+            }
+        }
     }
 
     post {
